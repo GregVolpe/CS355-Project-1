@@ -18,6 +18,5 @@ private:
 	int transparent(int);
 	int notTransparent(int);
 	int classVar;
-	int testingGit;
 };
 
