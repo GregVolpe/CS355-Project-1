@@ -27,6 +27,23 @@ void Problem4::pointerMap(int row, int col){
 	cout << "array[" << row << "][" << col << "] = " << *(*(*tblpntr + row) + col) << endl;
 }
 
+void Problem4::startTime() {
+	start = clock();
+}
+
+double Problem4::stopTime(){
+	duration = (clock() - start) / (double)CLOCKS_PER_SEC;
+	return getTime();
+}
+
+double Problem4::getTime(){
+	return duration;
+}
+void Problem4::clearTime(){
+	duration = -1;
+}
+
+
 
 Problem4::~Problem4()
 {

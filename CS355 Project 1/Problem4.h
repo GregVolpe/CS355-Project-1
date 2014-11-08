@@ -1,4 +1,5 @@
 #pragma once
+#include <time.h>
 class Problem4
 {
 public:
@@ -7,6 +8,10 @@ public:
 
 	void subscripting(int,int);
 	void pointerMap(int, int);
+	void startTime();
+	double stopTime();
+	double getTime();
+	void clearTime();
 
 
 private:
@@ -14,5 +19,7 @@ private:
 	int arrayOne[100][100];
 	int NUMROWS, NUMCOLS;
 	int((*tblpntr)[100])[100];
+	double duration;
+	clock_t start;
 };
 
