@@ -12,6 +12,7 @@ public:
 	void changeValue(int&);
 	void noChange(int);
 	void referentialTransparancy(int);
+	void runProblem();
 
 private:
 	int first, second;

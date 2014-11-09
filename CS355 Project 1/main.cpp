@@ -8,9 +8,17 @@ using namespace std;
 
 void main(){
 
-	Problem1 prob1;
-	prob1.runProblem1();
+	//Problem1 prob1;
+	//prob1.runProblem1();
 
+	Problem2 prob2;
+	prob2.runProblem();
+
+	//Problem3 prob3;
+	//prob3.runProblem();
+
+	//Problem4 prob4;
+	//prob4.runProblem();
 	/*
 	Problem2 prob2;
 	int numRuns = 1000;

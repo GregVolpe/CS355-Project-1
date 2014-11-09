@@ -158,10 +158,31 @@ double Problem2::getTime(){
 void Problem2::clearTime(){
 	duration = -1;
 }
-void Problem2::runProblem1(){
-	Problem2 problem;
-
+void Problem2::runProblem(){
+	int numRuns = this->getInput();
+	cout << "multiplying the static arrays" << endl;
+	this->createArray(numRuns);
+	cout << "multiplying the stack arrays" << endl;
+	this->createStack(numRuns);
+	cout << "multiplying the heap arrays" << endl;
+	this->createHeap(numRuns);
+	cout << "multiplying the heap arrays with no garbage collection" << endl;
+	this->createFubarHeap(numRuns);
 }
+
+int Problem2::getInput(){
+	cout << "Enter number of times to run each array." << endl;
+	int num;
+	cin >> num;
+	while (cin.fail() | num < 1){
+		cin.clear();
+		cin.ignore();
+		cout << "bad input, try again." << endl;
+		cin >> num;
+	}
+	return num;
+}
+
 
 Problem2::~Problem2()
 {

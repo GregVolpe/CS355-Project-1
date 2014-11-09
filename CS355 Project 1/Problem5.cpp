@@ -74,6 +74,16 @@ int Problem5::notTransparent(int a){
 	return a + classVar;
 }
 
+void Problem5::runProblem(){
+	int a = 20;
+	this->noChange(a);
+	cout << a << endl;
+	this->changeValue(a);
+	cout << a << endl;
+	this->generalMath();
+	this->referentialTransparancy(a);
+}
+
 Problem5::~Problem5()
 {
 }

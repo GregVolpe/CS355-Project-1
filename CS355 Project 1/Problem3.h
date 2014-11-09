@@ -18,6 +18,7 @@ public:
 	void math();
 	void bitwise();
 	void createArray();
+	void runProblem();
 
 };
 

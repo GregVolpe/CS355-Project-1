@@ -75,43 +75,42 @@ void Problem1::clearTime(){
 }
 void Problem1::runProblem1(){
 	int numRuns = getInput();
-	Problem1 problem;
 	cout << "Running static Array..." << endl;
-	problem.startTime();
+	this->startTime();
 	for (int i = 1; i < numRuns; i++){
-		problem.createArray();
+		this->createArray();
 	}
-	problem.stopTime();
-	double time = problem.getTime();
+	this->stopTime();
+	double time = this->getTime();
 	cout << "static declarations took " << time << endl;
-	problem.clearTime();
+	this->clearTime();
 	cout << "Running Stack Array..." << endl;
-	problem.startTime();
+	this->startTime();
 	for (int i = 1; i < numRuns; i++){
-		problem.createStack();
+		this->createStack();
 	}
-	problem.stopTime();
-	 time = problem.getTime();
+	this->stopTime();
+	 time = this->getTime();
 	cout << "stack declarations took " << time << endl;
-	problem.clearTime();
+	this->clearTime();
 	cout << "Running Heap Array..." << endl;
-	problem.startTime();
+	this->startTime();
 	for (int i = 1; i < numRuns; i++){
-		problem.createHeap();
+		this->createHeap();
 	}
-	problem.stopTime();
-	 time = problem.getTime();
+	this->stopTime();
+	time = this->getTime();
 	cout << "Heap declarations took " << time << endl;
-	problem.clearTime();
+	this->clearTime();
 	cout << "Running Heap Array, no garbage collection (20,000 passes)..." << endl;
-	problem.startTime();
+	this->startTime();
 	for (int i = 1; i < 20000; i++){
-		problem.createFubarHeap();
+		this->createFubarHeap();
 	}
-	problem.stopTime();
-	time = problem.getTime();
+	this->stopTime();
+	time = this->getTime();
 	cout << "Heap declarations took " << time << endl;
-	problem.clearTime();
+	this->clearTime();
 }
 int Problem1::getInput(){
 	cout << "Enter number of times to run each array." << endl;

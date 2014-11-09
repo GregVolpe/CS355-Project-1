@@ -46,31 +46,31 @@ void Problem4::clearTime(){
 	duration = -1;
 }
 
-void Problem4::runProblem4(){
+void Problem4::runProblem(){
 	double duration1, duration2 = 0;
-	Problem4 prob4;
 	getInput();
-	prob4.startTime();
+	cout << "Running the subscript" << endl;
+	this->startTime();
 	for (int a = 0; a < numTimesToRun; a++){
 		for (int i = 0; i < 100; i++){
 			for (int j = 0; j < 100; j++){
-				prob4.subscripting(i, j);
+				this->subscripting(i, j);
 			}
 		}
 	}
-	duration1 = prob4.stopTime();
+	duration1 = this->stopTime();
 	cout << "The subscripting access of all elements took " << duration1 << " seconds." << endl;
-	prob4.clearTime();
-
-	prob4.startTime();
-	for (int a = 0; a < numTimesToRun; a++){
-		for (int i = 0; i < 100; i++){
-			for (int j = 0; j < 100; j++){
-				prob4.pointerMap(i, j);
+	this->clearTime();
+	cout << "Running the pointer map" << endl;
+	this->startTime();
+		for (int a = 0; a < numTimesToRun; a++){
+			for (int i = 0; i < 100; i++){
+				for (int j = 0; j < 100; j++){
+					this->pointerMap(i, j);
+				}
 			}
 		}
-	}
-	duration2 = prob4.stopTime();
+	duration2 = this->stopTime();
 
 	cout << "the pointer mapping access of all elements took " << duration2 << " seconds" << endl;
 }

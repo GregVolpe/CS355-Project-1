@@ -43,3 +43,9 @@ void Problem3::createArray(){
 		cout << "There was an error!" << endl;
 	}
 }
+
+void Problem3::runProblem(){
+	this ->math();
+	this ->bitwise();
+	this ->createArray();
+}

@@ -17,10 +17,11 @@ public:
 	void stopTime();
 	double getTime();
 	void clearTime();
-	void runProblem1();
+	void runProblem();
 
 
 private:
+	int getInput();
 	void heapClean(int**, int**);
 	void initializeClassArrays();
 	double duration;

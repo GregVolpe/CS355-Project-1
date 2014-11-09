@@ -12,7 +12,7 @@ public:
 	double stopTime();
 	double getTime();
 	void clearTime();
-	void runProblem4();
+	void runProblem();
 	void getInput();
 
 
