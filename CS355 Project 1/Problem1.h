@@ -21,6 +21,7 @@ public:
 
 
 private:
+	int getInput();
 	void heapClean(int**,int**);
 	int parentArray1[100][100];
 	int parentArray2[100][100];

@@ -74,40 +74,54 @@ void Problem1::clearTime(){
 	duration = -1;
 }
 void Problem1::runProblem1(){
+	int numRuns = getInput();
 	Problem1 problem;
+	cout << "Running static Array..." << endl;
 	problem.startTime();
-	for (int i = 1; i < 150000; i++){
+	for (int i = 1; i < numRuns; i++){
 		problem.createArray();
 	}
 	problem.stopTime();
 	double time = problem.getTime();
 	cout << "static declarations took " << time << endl;
 	problem.clearTime();
-
+	cout << "Running Stack Array..." << endl;
 	problem.startTime();
-	for (int i = 1; i < 150000; i++){
+	for (int i = 1; i < numRuns; i++){
 		problem.createStack();
 	}
 	problem.stopTime();
 	 time = problem.getTime();
 	cout << "stack declarations took " << time << endl;
 	problem.clearTime();
-
+	cout << "Running Heap Array..." << endl;
 	problem.startTime();
-	for (int i = 1; i < 150000; i++){
+	for (int i = 1; i < numRuns; i++){
 		problem.createHeap();
 	}
 	problem.stopTime();
 	 time = problem.getTime();
 	cout << "Heap declarations took " << time << endl;
 	problem.clearTime();
-
+	cout << "Running Heap Array, no garbage collection (20,000 passes)..." << endl;
 	problem.startTime();
-	for (int i = 1; i < 150000; i++){
+	for (int i = 1; i < 20000; i++){
 		problem.createFubarHeap();
 	}
 	problem.stopTime();
 	time = problem.getTime();
 	cout << "Heap declarations took " << time << endl;
 	problem.clearTime();
+}
+int Problem1::getInput(){
+	cout << "Enter number of times to run each array." << endl;
+	int num;
+	cin >> num;
+	while (cin.fail() | num < 1){
+		cin.clear();
+		cin.ignore();
+		cout << "bad input, try again." << endl;
+		cin >> num;
+	}
+	return num;
 }

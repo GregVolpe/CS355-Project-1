@@ -8,15 +8,18 @@ using namespace std;
 
 void main(){
 
-	//Problem1 prob1;
-	//prob1.runProblem1();
+	Problem1 prob1;
+	prob1.runProblem1();
 
+	/*
 	Problem2 prob2;
 	int numRuns = 1000;
 	prob2.createArray(numRuns);
 	prob2.createStack(numRuns);
 	prob2.createHeap(numRuns);
 	prob2.createFubarHeap(numRuns);
+	*/
+
 	/*
 	Problem3 newProblem3;
 	newProblem3.math();
@@ -63,9 +66,8 @@ void main(){
 	cout << a << endl;
 	prob5.changeValue(a);
 	cout << a << endl;
-
 	prob5.generalMath();
+	prob5.referentialTransparancy(a);
 	*/
-
 	
 }

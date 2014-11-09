@@ -76,7 +76,7 @@ void Problem4::runProblem4(){
 }
 
 void Problem4::getInput(){
-	cout << "Enter number of times to run each array.  (NOTE: Anything over 2 times will take a while.)" << endl;
+	cout << "Enter number of times to run each array." << endl;
 	int num;
 	cin >> num;
 	while (cin.fail() | num < 1){
