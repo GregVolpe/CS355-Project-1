@@ -15,10 +15,15 @@ Problem3::~Problem3()
 
 void Problem3::bitwise(){
 	cout <<"(ONE | TWO) >> " << (ONE | TWO) << endl;    // Value will be 3.
+	cout << "(1 | 2) >> " << (1 | 2) << endl;    // Value will be 3.
 	cout <<"(TWO & FOUR) >> "<< (TWO & FOUR) << endl;   // Value will be 0.
+	cout << "(2 & 4) >> " << (2 & 4) << endl;   // Value will be 0.
 	cout <<"(TWO ^ EIGHT) >> "<< (TWO ^ EIGHT) << endl;  // Value will be 10.
+	cout << "(2 ^ 8) >> " << (2 ^ 8) << endl;  // Value will be 10.
 	cout <<"(EIGHT << 1) >> " << (EIGHT << 1) << endl;   // Value will be 16.
+	cout << "(8 << 1) >> " << (8 << 1) << endl;   // Value will be 16.
 	cout <<"(EIGHT >> 1) >> "<< (EIGHT >> 1) << endl;   // Value will be 4.
+	cout << "(8 >> 1) >> " << (8 >> 1) << endl;   // Value will be 4.
 
 }
 void Problem3::math(){
@@ -47,5 +52,10 @@ void Problem3::createArray(){
 void Problem3::runProblem(){
 	this ->math();
 	this ->bitwise();
-	this ->createArray();
+	cout << "Would you like to create an array with an enumeration?  (This will crash the program)" <<"\n1.yes\n2.no"<< endl;
+	int num;
+	cin >> num;
+	if (num == 1){
+		this->createArray();
+	}
 }
