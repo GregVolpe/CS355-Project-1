@@ -1,5 +1,6 @@
 #include "Problem5.h"
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 
@@ -77,6 +78,7 @@ int Problem5::notTransparent(int a){
 void Problem5::runProblem(){
 	int a = 20;
 	this->noChange(a);
+	cout<<"multiplyThings(sqrt(a),a); " << this->multiplyThings(sqrt(a),a);
 	cout << a << endl;
 	this->changeValue(a);
 	cout << a << endl;
