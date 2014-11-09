@@ -8,6 +8,8 @@ using namespace std;
 
 Problem1::Problem1()
 {
+	int parentArray2 = { 0 };
+	int parentArray1 = { 0 };
 }
 
 
@@ -16,12 +18,33 @@ Problem1::~Problem1()
 }
 
 void Problem1::createArray(){
-	//initialize the array to all 0
-	int parentArray2 = { 0 };
-	int parentArray1 = { 0 };
+	int arr1[100][100];
+	int arr2[100][100];
+
 }
 void Problem1::createHeap(){
+	int **arr1 = new int*[100];
+	int **arr2 = new int*[100];
 
+	for (int i = 0; i < 100; i++){
+		arr1[i] = new int[100];
+		arr2[i] = new int[100];
+		arr1[i] = { 0 };
+		arr2[i] = { 0 };
+		cout << "Creating elem " << i << endl;
+	}
+
+	heapClean(arr1, arr2);
+}
+
+void Problem1::heapClean(int **arr1,int **arr2){
+	for (int i = 0; i < 100; ++i) {
+		delete[] arr1[i];
+		delete[] arr2[i];
+		cout << "deleting elem " << i << endl;
+	}
+	delete[] arr1;
+	delete[] arr2;
 }
 
 void Problem1::createStack(){

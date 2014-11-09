@@ -19,6 +19,7 @@ public:
 
 
 private:
+	void heapClean(int**,int**);
 	int parentArray1[100][100];
 	int parentArray2[100][100];
 	double duration;
