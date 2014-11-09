@@ -102,15 +102,22 @@ void Problem1::runProblem1(){
 	time = this->getTime();
 	cout << "Heap declarations took " << time << endl;
 	this->clearTime();
-	cout << "Running Heap Array, no garbage collection (20,000 passes)..." << endl;
-	this->startTime();
-	for (int i = 1; i < 20000; i++){
-		this->createFubarHeap();
+
+	cout << "Would you like to run the heap array without garbage collection? (could cause program to crash).\n1.yes\n2.no" << endl;
+	int number;
+	cin >> number;
+	if (number == 1){
+		cout << "Running Heap Array, no garbage collection (15,000 passes)..." << endl;
+		this->startTime();
+		for (int i = 1; i < 15000; i++){
+			//cout << "Pass # " << i << endl;
+			this->createFubarHeap();
+		}
+		this->stopTime();
+		time = this->getTime();
+		cout << "Heap declarations took " << time << endl;
+		this->clearTime();
 	}
-	this->stopTime();
-	time = this->getTime();
-	cout << "Heap declarations took " << time << endl;
-	this->clearTime();
 }
 int Problem1::getInput(){
 	cout << "Enter number of times to run each array." << endl;
