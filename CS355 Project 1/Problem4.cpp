@@ -19,26 +19,35 @@ Problem4::Problem4()
 	NUMROWS = NUMCOLS = 100;
 	tblpntr = &arrayOne;
 }
+/*
+Simple function used to initialize an array with random numbers
+*/
 void Problem4::initializeArray(){
 	for (int i = 0; i < 100; i++){
 		for (int j = 0; j < 100; j++){
-			//arrayOne[i][j] = 20 + rand() % 100;
-			arrayOne[i][j] = 0;
+			arrayOne[i][j] = 20 + rand() % 100;
+
 		}
 	}
 
 }
-
+/*
+Simple function used to access the array via subscript
+*/
 void Problem4::subscripting(int row, int col){
 	//cout << "array[" << row << "][" << col << "] = " << arrayOne[row][col] << endl;
 	int a = arrayOne[row][col];
 }
-
+/*
+Simple function used to access the array via pointer arithmatic
+*/
 void Problem4::pointerMap(int row, int col){
 	//cout << "array[" << row << "][" << col << "] = " << *(*(*tblpntr + row) + col) << endl;
 	int a = *(*(*tblpntr + row) + col);
 }
-
+/*
+Simple function used to start the class clock
+*/
 void Problem4::startTime() {
 	start = clock();
 }
