@@ -1,3 +1,11 @@
+/*
+Greg Volpe
+CS 355
+Dr. Ganchev
+November 9, 2014
+Assignment 1
+MAIN file
+*/
 #include "Problem1.h"
 #include "Problem2.h"
 #include "Problem3.h"

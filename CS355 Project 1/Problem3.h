@@ -1,3 +1,12 @@
+/*
+Greg Volpe
+CS 355
+Dr. Ganchev
+November 9, 2014
+Assignment 1
+Problem 3 Header
+*/
+
 #pragma once
 class Problem3
 {

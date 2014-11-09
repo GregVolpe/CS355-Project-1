@@ -1,3 +1,12 @@
+/*
+Greg Volpe
+CS 355
+Dr. Ganchev
+November 9, 2014
+Assignment 1
+Problem 2 cpp
+*/
+
 #include "Problem2.h"
 #include <cstdlib>
 #include <iostream>

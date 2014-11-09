@@ -1,3 +1,12 @@
+/*
+Greg Volpe
+CS 355
+Dr. Ganchev
+November 9, 2014
+Assignment 1
+Problem 3 cpp
+*/
+
 #include "Problem3.h"
 #include <iostream>
 
@@ -48,6 +57,7 @@ void Problem3::createArray(){
 		cout << "There was an error!" << endl;
 	}
 }
+
 
 void Problem3::runProblem(){
 	this ->math();
