@@ -13,18 +13,21 @@ Problem4::Problem4()
 void Problem4::initializeArray(){
 	for (int i = 0; i < 100; i++){
 		for (int j = 0; j < 100; j++){
-			arrayOne[i][j] = 20 + rand() % 100;
+			//arrayOne[i][j] = 20 + rand() % 100;
+			arrayOne[i][j] = 0;
 		}
 	}
 
 }
 
 void Problem4::subscripting(int row, int col){
-	cout << "array[" << row << "][" << col << "] = " << arrayOne[row][col] << endl;
+	//cout << "array[" << row << "][" << col << "] = " << arrayOne[row][col] << endl;
+	int a = arrayOne[row][col];
 }
 
 void Problem4::pointerMap(int row, int col){
-	cout << "array[" << row << "][" << col << "] = " << *(*(*tblpntr + row) + col) << endl;
+	//cout << "array[" << row << "][" << col << "] = " << *(*(*tblpntr + row) + col) << endl;
+	int a = *(*(*tblpntr + row) + col);
 }
 
 void Problem4::startTime() {
@@ -56,7 +59,7 @@ void Problem4::runProblem4(){
 		}
 	}
 	duration1 = prob4.stopTime();
-
+	cout << "The subscripting access of all elements took " << duration1 << " seconds." << endl;
 	prob4.clearTime();
 
 	prob4.startTime();
@@ -69,7 +72,7 @@ void Problem4::runProblem4(){
 	}
 	duration2 = prob4.stopTime();
 
-	cout << "The subscripting access of all elements took " << duration1 << " seconds." << endl << "the pointer mapping access of all elements took " << duration2 << " seconds" << endl;
+	cout << "the pointer mapping access of all elements took " << duration2 << " seconds" << endl;
 }
 
 void Problem4::getInput(){

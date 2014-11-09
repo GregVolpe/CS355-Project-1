@@ -22,8 +22,7 @@ public:
 
 private:
 	void heapClean(int**, int**);
-	int parentArray1[100][100];
-	int parentArray2[100][100];
+	void initializeClassArrays();
 	double duration;
 	clock_t start;
 
