@@ -1,10 +1,10 @@
 #pragma once
 #include <time.h>
-class Problem1
+class Problem2
 {
 public:
-	Problem1();
-	~Problem1();
+	Problem2();
+	~Problem2();
 
 	void createArray();
 
@@ -21,7 +21,7 @@ public:
 
 
 private:
-	void heapClean(int**,int**);
+	void heapClean(int**, int**);
 	int parentArray1[100][100];
 	int parentArray2[100][100];
 	double duration;

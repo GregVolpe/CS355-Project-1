@@ -7,14 +7,15 @@ using namespace std;
 
 void main(){
 
-	Problem1 prob1;
-	prob1.createHeap();
-	/*
+	//Problem1 prob1;
+	//prob1.runProblem1();
+
+	
 	Problem3 newProblem3;
 	newProblem3.math();
 	newProblem3.bitwise();
 	newProblem3.createArray();
-	*/
+	
 	/*
 	Problem4 prob4;
 	prob4.runProblem4();

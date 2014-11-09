@@ -28,6 +28,7 @@ void Problem3::math(){
 	cout << "(EIGHT / TWO) >> " << (EIGHT / TWO) << endl;  // Value will be 4.
 }
 
+//THIS WILL GENERATE AN ERROR
 void Problem3::createArray(){
 	int intArray[INTCOUNT];
 	for (int i = 0; i < sizeof(intArray); i++){

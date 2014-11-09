@@ -18,8 +18,8 @@ Problem1::~Problem1()
 }
 
 void Problem1::createArray(){
-	int arr1[100][100];
-	int arr2[100][100];
+	static int arr1[100][100];
+	static int arr2[100][100];
 
 }
 void Problem1::createHeap(){
@@ -29,26 +29,33 @@ void Problem1::createHeap(){
 	for (int i = 0; i < 100; i++){
 		arr1[i] = new int[100];
 		arr2[i] = new int[100];
-		arr1[i] = { 0 };
-		arr2[i] = { 0 };
-		cout << "Creating elem " << i << endl;
 	}
 
 	heapClean(arr1, arr2);
+}
+
+void Problem1::createFubarHeap(){
+	int **arr1 = new int*[100];
+	int **arr2 = new int*[100];
+
+	for (int i = 0; i < 100; i++){
+		arr1[i] = new int[100];
+		arr2[i] = new int[100];
+	}
 }
 
 void Problem1::heapClean(int **arr1,int **arr2){
 	for (int i = 0; i < 100; ++i) {
 		delete[] arr1[i];
 		delete[] arr2[i];
-		cout << "deleting elem " << i << endl;
 	}
 	delete[] arr1;
 	delete[] arr2;
 }
 
 void Problem1::createStack(){
-	int *stackArray = new int[100];
+	int stackArray1[100][100];
+	int stackArray2[100][100];
 
 
 }
@@ -69,11 +76,38 @@ void Problem1::clearTime(){
 void Problem1::runProblem1(){
 	Problem1 problem;
 	problem.startTime();
-	for (int i = 1; i < 100000; i++){
+	for (int i = 1; i < 150000; i++){
 		problem.createArray();
 	}
 	problem.stopTime();
 	double time = problem.getTime();
-	cout << "declarations took " << time << endl;
+	cout << "static declarations took " << time << endl;
+	problem.clearTime();
+
+	problem.startTime();
+	for (int i = 1; i < 150000; i++){
+		problem.createStack();
+	}
+	problem.stopTime();
+	 time = problem.getTime();
+	cout << "stack declarations took " << time << endl;
+	problem.clearTime();
+
+	problem.startTime();
+	for (int i = 1; i < 150000; i++){
+		problem.createHeap();
+	}
+	problem.stopTime();
+	 time = problem.getTime();
+	cout << "Heap declarations took " << time << endl;
+	problem.clearTime();
+
+	problem.startTime();
+	for (int i = 1; i < 150000; i++){
+		problem.createFubarHeap();
+	}
+	problem.stopTime();
+	time = problem.getTime();
+	cout << "Heap declarations took " << time << endl;
 	problem.clearTime();
 }
