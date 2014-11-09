@@ -1,4 +1,5 @@
 #include "Problem1.h"
+#include "Problem2.h"
 #include "Problem3.h"
 #include "Problem4.h"
 #include "Problem5.h"
@@ -10,16 +11,22 @@ void main(){
 	//Problem1 prob1;
 	//prob1.runProblem1();
 
+	Problem2 prob2;
+	int numRuns = 1000;
+	prob2.createArray(numRuns);
+	prob2.createStack(numRuns);
+	prob2.createHeap(numRuns);
+	prob2.createFubarHeap(numRuns);
 	/*
 	Problem3 newProblem3;
 	newProblem3.math();
 	newProblem3.bitwise();
 	newProblem3.createArray();
 	*/
-	
+	/*
 	Problem4 prob4;
 	prob4.runProblem4();
-	
+	*/
 	/*
 	double duration1, duration2=0;
 	Problem4 prob4;

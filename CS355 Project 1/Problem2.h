@@ -6,13 +6,13 @@ public:
 	Problem2();
 	~Problem2();
 
-	void createArray();
+	void createArray(int numRuns);
 
-	void createStack();
+	void createStack(int numRuns);
 
-	void createHeap();
+	void createHeap(int numRuns);
 
-	void createFubarHeap();
+	void createFubarHeap(int numRuns);
 	void startTime();
 	void stopTime();
 	double getTime();

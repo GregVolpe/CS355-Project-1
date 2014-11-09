@@ -10,7 +10,7 @@ Problem2::Problem2()
 }
 
 
-void Problem2::createArray(){
+void Problem2::createArray(int numRuns){
 	static int arr1[100][100] = { 0 };
 	static int arr2[100][100];
 
@@ -19,18 +19,27 @@ void Problem2::createArray(){
 			arr2[i][j] = rand() % 100;
 		}
 	}
-	for (int a = 0; a < 100;a++)
-	{
-		for (int b = 0; b < 100;b++)
+	int counter = 2;
+	int count=0;
+	startTime();
+	for (int d = 0; d < numRuns; d++){
+		//cout << "Pass # " << d << endl;
+		for (int a = 0; a < 100; a++)
 		{
-			for (int c = 0; c < 100;c++)
+			for (int b = 0; b < 100; b++)
 			{
-				arr1[a][b] = arr1[a][b] + arr2[a][c] * arr2[c][b];
+				for (int c = 0; c < 100; c++)
+				{
+					arr1[a][b] = arr1[a][b] + arr2[a][c] * arr2[c][b];
+				}
 			}
 		}
 	}
+		stopTime();
+		cout <<"The static declaration took "<< getTime()<<endl;
+		clearTime();
 }
-void Problem2::createHeap(){
+void Problem2::createHeap(int numRuns){
 	int **arr1 = new int*[100];
 	int **arr2 = new int*[100];
 
@@ -38,11 +47,34 @@ void Problem2::createHeap(){
 		arr1[i] = new int[100];
 		arr2[i] = new int[100];
 	}
-
+	for (int i = 0; i < 100; i++){
+		for (int j = 0; j < 100; j++){
+			arr1[i][j] = 0;
+			arr2[i][j] = rand() % 100;
+		}
+	}
+	clearTime();
+	startTime();
+	for (int d = 0; d < numRuns; d++){
+		//cout << "Pass # " << d << endl;
+			for (int a = 0; a < 100; a++)
+			{
+				for (int b = 0; b < 100; b++)
+				{
+					for (int c = 0; c < 100; c++)
+					{
+						arr1[a][b] = arr1[a][b] + arr2[a][c] * arr2[c][b];
+					}
+				}
+			}
+		}
+	stopTime();
 	heapClean(arr1, arr2);
+	cout <<"The Heap took: "<< getTime() << endl;
 }
 
-void Problem2::createFubarHeap(){
+
+void Problem2::createFubarHeap(int numRuns){
 	int **arr1 = new int*[100];
 	int **arr2 = new int*[100];
 
@@ -50,6 +82,29 @@ void Problem2::createFubarHeap(){
 		arr1[i] = new int[100];
 		arr2[i] = new int[100];
 	}
+	for (int i = 0; i < 100; i++){
+		for (int j = 0; j < 100; j++){
+			arr1[i][j] = 0;
+			arr2[i][j] = rand() % 100;
+		}
+	}
+	clearTime();
+	startTime();
+	for (int d = 0; d < numRuns; d++){
+		//cout << "Pass # " << d << endl;
+		for (int a = 0; a < 100; a++)
+		{
+			for (int b = 0; b < 100; b++)
+			{
+				for (int c = 0; c < 100; c++)
+				{
+					arr1[a][b] = arr1[a][b] + arr2[a][c] * arr2[c][b];
+				}
+			}
+		}
+	}
+	stopTime();
+	cout << "The Fubar Heap took: " << getTime() << endl;
 }
 
 void Problem2::heapClean(int **arr1, int **arr2){
@@ -61,10 +116,32 @@ void Problem2::heapClean(int **arr1, int **arr2){
 	delete[] arr2;
 }
 
-void Problem2::createStack(){
-	int stackArray1[100][100];
-	int stackArray2[100][100];
-
+void Problem2::createStack(int numRuns){
+	int arr1[100][100] = { 0 };
+	int arr2[100][100];
+	for (int i = 0; i < 100; i++){
+		for (int j = 0; j < 100; j++){
+			arr1[i][j] = 0;
+			arr2[i][j] = rand() % 100;
+		}
+	}
+	clearTime();
+	startTime();
+	for (int d = 0; d < numRuns; d++){
+		//cout << "Pass # " << d << endl;
+		for (int a = 0; a < 100; a++)
+		{
+			for (int b = 0; b < 100; b++)
+			{
+				for (int c = 0; c < 100; c++)
+				{
+					arr1[a][b] = arr1[a][b] + arr2[a][c] * arr2[c][b];
+				}
+			}
+		}
+	}
+	stopTime();
+	cout << "The stack took: " << getTime() << endl;
 
 }
 void Problem2::startTime() {
@@ -83,44 +160,8 @@ void Problem2::clearTime(){
 }
 void Problem2::runProblem1(){
 	Problem2 problem;
-	problem.startTime();
-	for (int i = 1; i < 150000; i++){
-		problem.createArray();
-	}
-	problem.stopTime();
-	double time = problem.getTime();
-	cout << "static declarations took " << time << endl;
-	problem.clearTime();
 
-	problem.startTime();
-	for (int i = 1; i < 150000; i++){
-		problem.createStack();
-	}
-	problem.stopTime();
-	time = problem.getTime();
-	cout << "stack declarations took " << time << endl;
-	problem.clearTime();
-
-	problem.startTime();
-	for (int i = 1; i < 150000; i++){
-		problem.createHeap();
-	}
-	problem.stopTime();
-	time = problem.getTime();
-	cout << "Heap declarations took " << time << endl;
-	problem.clearTime();
-
-	problem.startTime();
-	for (int i = 1; i < 150000; i++){
-		problem.createFubarHeap();
-	}
-	problem.stopTime();
-	time = problem.getTime();
-	cout << "Heap declarations took " << time << endl;
-	problem.clearTime();
 }
-
-
 
 Problem2::~Problem2()
 {
