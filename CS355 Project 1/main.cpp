@@ -12,6 +12,10 @@ void main(){
 	newProblem3.bitwise();
 	newProblem3.createArray();
 	*/
+
+	Problem4 prob4;
+	prob4.runProblem4();
+	/*
 	double duration1, duration2=0;
 	Problem4 prob4;
 	prob4.startTime();
@@ -37,7 +41,7 @@ void main(){
 	duration2 = prob4.stopTime();
 
 	cout << "The subscripting access of all elements took " << duration1 << " seconds." << endl << "the pointer mapping access of all elements took " << duration2 << " seconds" << endl;
-
+	*/
 
 
 	/*

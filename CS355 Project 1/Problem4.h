@@ -12,6 +12,8 @@ public:
 	double stopTime();
 	double getTime();
 	void clearTime();
+	void runProblem4();
+	void getInput();
 
 
 private:
@@ -21,5 +23,6 @@ private:
 	int((*tblpntr)[100])[100];
 	double duration;
 	clock_t start;
+	int numTimesToRun;
 };
 
