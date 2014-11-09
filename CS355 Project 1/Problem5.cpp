@@ -61,10 +61,9 @@ void Problem5::noChange(int a){
 
 void Problem5::referentialTransparancy(int a){
 	for (int i = 0; i < 100; i++){
-		cout << "Transparent: " << transparent(a) << endl;
-		cout << "Non-Transparent: " << notTransparent(a) << endl;
+		cout << "Transparent: " << addThings(transparent(a),10) << endl;
+		cout << "Non-Transparent: " << addThings(notTransparent(a),10) << endl;
 	}
-
 
 }
 int Problem5::transparent(int a){
