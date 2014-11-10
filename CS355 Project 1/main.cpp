@@ -18,7 +18,9 @@ int getInput();
 static void runSolution();
 static void instructions();
 static void problem6();
-
+/*
+Simple function used to get input from the user
+*/
 static int getInput(){
 	cout << "Enter the number of the problem you want to run." << endl;
 	int num;
@@ -31,6 +33,9 @@ static int getInput(){
 	}
 	return num;
 }
+/*
+Simple function used to provide basic I/O options for the user to select which problems to run.
+*/
 static void runSolution(){
 	int num = -1;
 	Problem1 prob1;
@@ -71,6 +76,9 @@ static void runSolution(){
 		}
 	}
 }
+/*
+Simple function used to output instructions to the user
+*/
 static void instructions(){
 	cout << "The following application will allow you to run 5 applications." << endl << "1. The first problem tests the timing for memory allocation." << endl
 		<< "2. The second problem measures access times for array elements." << endl << "3. The third problem investigates safety of enumations." << endl
@@ -80,7 +88,9 @@ static void instructions(){
 		<< "0. You can input 0 to exit the application."		
 		<< endl << endl;
 }
-
+/*
+Simple function used to provide analysis of problem 6
+*/
 static void problem6(){
 	cout << "The else statement in a python for-loop is useful for instances where the loop processes through to the end." << endl
 		<< "It helps differentiate where the program breaks from the loop (because of a break; statement) versus where the loop finishes to the end."<<endl
@@ -89,6 +99,9 @@ static void problem6(){
 		<< "an error statement for example."
 		<< endl << endl;
 }
+/*
+Main function
+*/
  void main(){
 	 instructions();
 	 runSolution();

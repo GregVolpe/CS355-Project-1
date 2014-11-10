@@ -21,7 +21,9 @@ Problem3::Problem3()
 Problem3::~Problem3()
 {
 }
-
+/*
+Simple function used to execute bitwise operations on enumerated types and the numerical counter parts
+*/
 void Problem3::bitwise(){
 	cout <<"(ONE | TWO) >> " << (ONE | TWO) << endl;    // Value will be 3.
 	cout << "(1 | 2) >> " << (1 | 2) << endl;    // Value will be 3.
@@ -35,6 +37,9 @@ void Problem3::bitwise(){
 	cout << "(8 >> 1) >> " << (8 >> 1) << endl;   // Value will be 4.
 
 }
+/*
+Simple function used to perform mathematical operations on enumerated types
+*/
 void Problem3::math(){
 	cout << "(ONE + TWO) >> " << (ONE + TWO) << endl;    // Value will be 3.
 	cout << "(FOUR - TWO) >> " << (FOUR - TWO) << endl;   // Value will be 2.
@@ -43,6 +48,9 @@ void Problem3::math(){
 }
 
 //THIS WILL GENERATE AN ERROR
+/*
+Simple function used to create an array with the size of an enumerated type
+*/
 void Problem3::createArray(){
 	int intArray[INTCOUNT];
 	for (int i = 0; i < sizeof(intArray); i++){
@@ -57,8 +65,9 @@ void Problem3::createArray(){
 		cout << "There was an error!" << endl;
 	}
 }
-
-
+/*
+Simple function used to perform all operations of Problem 3
+*/
 void Problem3::runProblem(){
 	this ->math();
 	this ->bitwise();

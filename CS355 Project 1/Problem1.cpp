@@ -25,12 +25,17 @@ Problem1::Problem1()
 Problem1::~Problem1()
 {
 }
-
+/*
+Simple function used to declare two static arrays of size 100x100
+*/
 void Problem1::createArray(){
 	static int arr1[100][100];
 	static int arr2[100][100];
 
 }
+/*
+Simple function used to declare two arrays of size 100x100 on the heap and will deallocate memory on exit
+*/
 void Problem1::createHeap(){
 	int **arr1 = new int*[100];
 	int **arr2 = new int*[100];
@@ -42,7 +47,9 @@ void Problem1::createHeap(){
 
 	heapClean(arr1, arr2);
 }
-
+/*
+Simple function used to declare two arrays of size 100x100 on the heap, but will not deallocate the memeory on exit
+*/
 void Problem1::createFubarHeap(){
 	int **arr1 = new int*[100];
 	int **arr2 = new int*[100];
@@ -52,7 +59,9 @@ void Problem1::createFubarHeap(){
 		arr2[i] = new int[100];
 	}
 }
-
+/*
+Simple function used to deallocate the memory of two heap arrays
+*/
 void Problem1::heapClean(int **arr1,int **arr2){
 	for (int i = 0; i < 100; ++i) {
 		delete[] arr1[i];
@@ -61,27 +70,42 @@ void Problem1::heapClean(int **arr1,int **arr2){
 	delete[] arr1;
 	delete[] arr2;
 }
-
+/*
+Simple function used to declare two arrays on the stack
+*/
 void Problem1::createStack(){
 	int stackArray1[100][100];
 	int stackArray2[100][100];
 
 
 }
+/*
+Simple function used to start the class clock
+*/
 void Problem1::startTime() {
 	start = clock();
 }
-
+/*
+Simple function used to stop the class clock and calculate duration
+*/
 void Problem1::stopTime(){
 	duration = (clock() - start) / (double)CLOCKS_PER_SEC;
 }
-
+/*
+Simple function used to get the duration from the class clock
+*/
 double Problem1::getTime(){
 	return duration;
 }
+/*
+Simple function used to clear the duration on the class clock
+*/
 void Problem1::clearTime(){
 	duration = -1;
 }
+/*
+Simple function used to perform all operations of problem 1
+*/
 void Problem1::runProblem1(){
 	int numRuns = getInput();
 	cout << "Running static Array..." << endl;
@@ -128,6 +152,9 @@ void Problem1::runProblem1(){
 		this->clearTime();
 	}
 }
+/*
+Simple function used to get inputs from the user
+*/
 int Problem1::getInput(){
 	cout << "Enter number of times to run each array." << endl;
 	int num;

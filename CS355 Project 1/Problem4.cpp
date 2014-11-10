@@ -51,19 +51,28 @@ Simple function used to start the class clock
 void Problem4::startTime() {
 	start = clock();
 }
-
+/*
+Simple function used to stop the class clock and calculate the duration
+*/
 double Problem4::stopTime(){
 	duration = (clock() - start) / (double)CLOCKS_PER_SEC;
 	return getTime();
 }
-
+/*
+Simple function used to get
+*/
 double Problem4::getTime(){
 	return duration;
 }
+/*
+Simple function used to clear the class clock duration
+*/
 void Problem4::clearTime(){
 	duration = -1;
 }
-
+/*
+Simple function used to execute the requested problem
+*/
 void Problem4::runProblem(){
 	double duration1, duration2 = 0;
 	getInput();
@@ -92,7 +101,9 @@ void Problem4::runProblem(){
 
 	cout << "the pointer mapping access of all elements took " << duration2 << " seconds" << endl;
 }
-
+/*
+Simple function used to get input from the user
+*/
 void Problem4::getInput(){
 	cout << "Enter number of times to run each array." << endl;
 	int num;
